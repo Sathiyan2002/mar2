@@ -1,0 +1,21 @@
+pipeline
+{
+  agent any
+  stages
+  {
+    stage("GIT")
+    {
+      steps
+      {
+        git "https://github.com/Sathiyan2002/mar1"
+      }
+    }
+    stage("Run")
+    {
+      steps
+      {
+        "javac Demo.java"
+      }
+    }
+  }
+}
